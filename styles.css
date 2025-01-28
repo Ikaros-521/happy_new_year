@@ -1,0 +1,60 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#backgroundCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#wishDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#changeWishBtn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: white;
+  color: #3b82f6;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#changeWishBtn:hover {
+  background-color: #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  #wishDisplay {
+    font-size: 3rem;
+  }
+}
+
